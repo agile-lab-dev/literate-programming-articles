@@ -223,6 +223,7 @@ Note that in Ruby, "Hash" is not related to the cryptographic hash-functions but
 #!/usr/bin/env ruby
 # SPDX-FileCopyrightText: 2024 AGILE LAB S.R.L. <agilelab@pec.it>
 # SPDX-License-Identifier: MIT
+require 'fileutils'
 require 'json'
 
 # Persistent data-structures
