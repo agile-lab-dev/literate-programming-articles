@@ -190,17 +190,17 @@ Since the codeblocks can be detected by a simple line-by-line scanning of the fi
 
 ```mermaid
 stateDiagram-v2
-  start: START\n [state = start]
-  A: Inside a fenced\n codeblock\n [state = new_codeblock]
+  start: START<br/> [state = start]
+  A: Inside a fenced<br/> codeblock<br/> [state = new_codeblock]
   B: [state = tracked_codeblock]
   C: [state = untracked_codeblock]
 
-start --> A : Encountered a\n fenced codeblock\n #(1)
-A --> start : End of codeblock\n #(2)
-A --> B : First line of\n codeblock is JSON\n #(3)
-B --> start : End of codeblock\n #(4)
-A --> C : First line of\n codeblock is not JSON\n #(5)
-C --> start : End of codeblock\n #(6)
+start --> A : Encountered a<br/> fenced codeblock<br/> #(1)
+A --> start : End of codeblock<br/> #(2)
+A --> B : First line of<br/> codeblock is JSON<br/> #(3)
+B --> start : End of codeblock<br/> #(4)
+A --> C : First line of<br/> codeblock is not JSON<br/> #(5)
+C --> start : End of codeblock<br/> #(6)
 ```
 
 The code will follow the graph mentioned above, and will be wrote using the same style as the one described in the "Primer on Finite State Machines (FSMs) in Ruby" chapter.
